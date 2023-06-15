@@ -1,29 +1,29 @@
-const { v4: uuidv4 } = require('uuid');
-const { ExpressPeerServer } = require('peer');
+import { v4 as uuidv4 } from 'uuid'
+import { ExpressPeerServer } from 'peer'
+import express from 'express'
 
-const express = require('express');
+// configuration
 const app = express();
-
 const server = require('http').Server(app);
-
 const io = require('socket.io')(server);
-
 const peerServer = ExpressPeerServer(server, {
     debug: true,
 });
 
+// configuring app
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use('/peerjs', peerServer)
 
+// routes configuration
 app.get('/', (req, res) => {
-    res.redirect(`/${uuidv4()}`);
+    res.render('index', { nextRoomId: uuidv4() });
 });
-
 app.get('/:room', (req, res) => {
     res.render('room', { roomId: req.params.room });
 });
 
+// socket io configuration
 io.on('connection', socket => {
     socket.on('join-room', (roomId, userId) => {
         socket.join(roomId);
@@ -35,4 +35,5 @@ io.on('connection', socket => {
     });
 });
 
-server.listen(process.env.PORT||3030);
+// starting the server
+server.listen(process.env.PORT || 3030);

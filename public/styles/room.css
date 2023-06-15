@@ -95,6 +95,7 @@ video {
     color: #f5f5f5;
     text-align: center;
     padding-top: 6px;
+
     /* While not Implemented */
     /* flex: 0.8; */
     /* color: #ffc107; */
@@ -152,6 +153,7 @@ video {
 .ummute {
     color: #ccc;
 }
+
 /* .main__header i { */
 
     /* While not Implemented */
