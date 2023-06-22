@@ -17,7 +17,7 @@
 
     <!-- socket.io and peerjs scripts -->
     <script src="/socket.io/socket.io.js"></script>
-    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
 
     <!-- css -->
     <link rel="stylesheet" href="styles/room.css">
@@ -42,6 +42,14 @@
 </head>
 
 <body>
+    <dialog modal id="join-confirm-dialog">
+        <p>Enter your name: </p>
+        <form>
+            <input id="name-input-for-join" type="text" placeholder="Your name"></input>
+            <button id="join-btn">Join</button>
+        </form>
+    </dialog>
+
     <div class="main">
         <div class="main__left">
             <div class="main__videos">
@@ -51,11 +59,11 @@
             </div>
             <div class="main__controls">
                 <div class="main__controls__block">
-                    <div onclick="muteUnmute()" class="main__controls__button main__mute_button">
+                    <div onclick="toggleAudio()" class="main__controls__button main__mute_button">
                         <i class="fas fa-microphone"></i>
                         <span>Mute</span>
                     </div>
-                    <div onclick="startStopVideo()" class="main__controls__button main__video_button">
+                    <div onclick="toggleVideo()" class="main__controls__button main__video_button">
                         <i class="fas fa-video"></i>
                         <span>Stop Video</span>
                     </div>
@@ -91,7 +99,7 @@
                 </ul>
             </div>
             <div class="main__message_container">
-                <input type="text" id="chat_message" placeholder="Message ...">
+                <input type="text" id="chat-message-input" placeholder="Message ...">
             </div>
         </div>
     </div>

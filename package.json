@@ -2,15 +2,17 @@
 	"name": "zoom-clone",
 	"version": "0.1.0",
 	"description": "Zoom Clone by Manbir Singh Judge.",
+	"type": "module",
 	"main": "server.js",
 	"scripts": {
-		"run": "nodemon server.js"
+		"start": "nodemon server.js"
 	},
 	"author": "Manbir Singh Judge",
 	"license": "MIT",
 	"dependencies": {
 		"ejs": "^3.1.6",
 		"express": "^4.17.1",
+		"nodemon": "^2.0.22",
 		"peer": "^0.6.1",
 		"socket.io": "^4.1.2",
 		"uuid": "^8.3.2"
