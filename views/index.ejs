@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- tItLe -->
-    <title>Welcome to Zoom Clone</title>
+    <title>Zoom Clone</title>
 
     <!-- css -->
     <link rel="stylesheet" href="styles/index.css">
@@ -41,7 +41,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
@@ -70,11 +70,13 @@
                         aria-expanded="false">
                         SIGN UP, IT'S FREE
                     </button>
-                </div>
+                </div> -->
             </div>
         </div>
     </nav>
-    <a href="/<%= nextRoomId %>">New meeting</a>
+    <div class="container-fluid d-flex flex-row justifiy-content-center">
+        <a class="btn btn-primary mt-3 mx-auto" href="/rooms/<%= nextRoomId %>">New meeting</a>
+    </div>
 </body>
 
 </html>

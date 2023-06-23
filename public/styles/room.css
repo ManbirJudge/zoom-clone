@@ -1,4 +1,6 @@
-body, html, h6 {
+body,
+html,
+h6 {
     margin: 0;
     padding: 0;
 }
@@ -45,7 +47,7 @@ video {
 }
 
 .main__controls__block {
-    display: flex;   
+    display: flex;
 }
 
 .main__controls__button {
@@ -156,16 +158,16 @@ video {
 
 /* .main__header i { */
 
-    /* While not Implemented */
-    /* font-size: 60px; */
+/* While not Implemented */
+/* font-size: 60px; */
 /* } */
 
 /* .main__right  h6 { */
 
-    /* While not Implemented */
-    /* font-size: 30px; */
-    /* font-style: normal; */
-    /* font-weight: normal; */
-    /* text-align: center; */
-    /* margin: 30px 0px; */
+/* While not Implemented */
+/* font-size: 30px; */
+/* font-style: normal; */
+/* font-weight: normal; */
+/* text-align: center; */
+/* margin: 30px 0px; */
 /* } */

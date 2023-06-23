@@ -21,23 +21,17 @@ app.use('/peerjs', peerServer)
 app.get('/', (req, res) => {
     res.render('index', { nextRoomId: uuidv4() });
 });
-app.get('/:room', (req, res) => {
+app.get('/rooms/:room', (req, res) => {
     res.render('room', { roomId: req.params.room });
 });
 
 // socket io configuration
 io.on('connection', socket => {
-    console.log('New IO connection.')
-
     socket.on('join-room', (roomId, userId, userName) => {
-        console.log(`A connection joined a room - ${userName} [${userId}].`)
-
         socket.join(roomId);
         socket.to(roomId).emit('user-joined', userId, userName);
 
         socket.on('message', message => {
-            console.log(`${userId} ${message}`)
-
             io.to(roomId).emit('user-messaged', message, userId);
         });
     });
