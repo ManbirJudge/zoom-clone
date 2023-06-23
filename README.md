@@ -1,5 +1,5 @@
 # Zoom Clone
-A Zoom clone made using Express, Socket.IO and PeerJS
+A Zoom clone made using Express, Socket.IO and PeerJS.
 
 ## Note
 Zoom clone 2.0 is under developement. I will post the repositry on Github soon (hopefully).
