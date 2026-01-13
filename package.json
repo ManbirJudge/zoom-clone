@@ -10,11 +10,12 @@
 	"author": "Manbir Singh Judge",
 	"license": "MIT",
 	"dependencies": {
-		"ejs": "^3.1.6",
-		"express": "^4.17.1",
-		"nodemon": "^2.0.22",
-		"peer": "^0.6.1",
-		"socket.io": "^4.1.2",
-		"uuid": "^8.3.2"
+		"ejs": "^3.1.10",
+		"express": "^5.2.1",
+		"express-ejs-layouts": "^2.5.1",
+		"nodemon": "^3.1.11",
+		"peer": "^1.0.2",
+		"socket.io": "^4.8.3",
+		"uuid": "^13.0.0"
 	}
 }
