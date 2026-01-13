@@ -18,3 +18,8 @@
 - Icons
 - Optimize layout for mobile (landscape only).
 - Validation and error handling.
+
+## Changelog
+### 13-01-2025
+- HUUUUUGE update and cleanup (not new features).
+- Hosting.
