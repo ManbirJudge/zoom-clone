@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- metadata -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- tItLe -->
+    <title>Zoom Clone</title>
+
+    <!-- storing room -->
+    <script>
+        const ROOM_ID = "<%= roomId %>";
+    </script>
+
+    <!-- socket.io and peerjs scripts -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="/styles/room.css">
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/7fa49a6d73.js" crossorigin="anonymous"></script>
+
+    <!-- booststrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <dialog id="join-confirm-dialog" class="border border-primary border-3 rounded-3">
+        <form>
+            <div class="mb-3">
+                <label for="name-input-for-join" class="form-label">Enter your name:</label>
+                <input id="name-input-for-join" class="form-control"="text" placeholder="Your name"></input>
+            </div>
+            <button type="submit" id="join-btn" class="btn btn-primary">Join</button>
+        </form>
+    </dialog>
+
+    <div class="main">
+        <div class="main__left">
+            <div class="main__videos">
+                <div class="video-grid" id="video-grid">
+
+                </div>
+            </div>
+            <div class="main__controls">
+                <div class="main__controls__block">
+                    <div onclick="toggleAudio()" class="main__controls__button main__mute_button">
+                        <i class="fas fa-microphone"></i>
+                        <span>Mute</span>
+                    </div>
+                    <div onclick="toggleVideo()" class="main__controls__button main__video_button">
+                        <i class="fas fa-video"></i>
+                        <span>Stop Video</span>
+                    </div>
+                </div>
+                <div class="main__controls__block">
+                    <div class="main__controls__button">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Security</span>
+                    </div>
+                    <div class="main__controls__button">
+                        <i class="fas fa-user-friends"></i>
+                        <span>Participants</span>
+                    </div>
+                    <div class="main__controls__button">
+                        <i class="fas fa-comment-alt"></i>
+                        <span>Chat</span>
+                    </div>
+                </div>
+                <div class="main__controls__block">
+                    <div class="main__controls__button leaveMeeting__controls__button">
+                        <span>Leave Meeting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main__right">
+            <div class="main__header">
+                <h6>Chat</h6>
+            </div>
+            <div class="main__chat_window">
+                <ul class="messages">
+
+                </ul>
+            </div>
+            <div class="main__message_container">
+                <input type="text" id="chat-message-input" placeholder="Message ...">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

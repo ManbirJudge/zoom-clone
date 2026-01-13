@@ -1,0 +1,20 @@
+{
+	"name": "zoom-clone",
+	"version": "0.1.0",
+	"description": "A Zoom clone made using Express, Socket.IO and PeerJS.",
+	"type": "module",
+	"main": "server.js",
+	"scripts": {
+		"start": "nodemon server.js"
+	},
+	"author": "Manbir Singh Judge",
+	"license": "MIT",
+	"dependencies": {
+		"ejs": "^3.1.6",
+		"express": "^4.17.1",
+		"nodemon": "^2.0.22",
+		"peer": "^0.6.1",
+		"socket.io": "^4.1.2",
+		"uuid": "^8.3.2"
+	}
+}
